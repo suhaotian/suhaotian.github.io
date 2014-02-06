@@ -82,7 +82,8 @@ a:visited { color: #a0a; }
 }
 
 .header a.extra {
-  color: #aaa;
+  color: #000;
+  matgin-bottom:1.5em;
  
 }
 
