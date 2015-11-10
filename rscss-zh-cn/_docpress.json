@@ -441,8 +441,8 @@
     "docs/summary.md": "summary.html",
     "docs/docpress.json": "docpress.json",
     "docs/images/component-elements.png": "images/component-elements.png",
-    "docs/images/component-modifiers.png": "images/component-modifiers.png",
     "docs/images/component-example.png": "images/component-example.png",
+    "docs/images/component-modifiers.png": "images/component-modifiers.png",
     "docs/images/component-nesting.png": "images/component-nesting.png",
     "docs/images/layouts.png": "images/layouts.png"
   }
