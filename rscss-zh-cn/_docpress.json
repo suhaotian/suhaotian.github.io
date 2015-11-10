@@ -1,0 +1,449 @@
+{
+  "toc": {
+    "sections": [
+      {
+        "title": "rscss",
+        "source": "README.md",
+        "url": "index.html",
+        "slug": "index",
+        "headings": [
+          {
+            "title": "介绍",
+            "depth": 2,
+            "id": ""
+          }
+        ]
+      },
+      {
+        "title": "组件 (Components) ",
+        "sections": [
+          {
+            "title": "关于组件 (About components)",
+            "source": "docs/components.md",
+            "url": "components.html",
+            "slug": "components",
+            "headings": [
+              {
+                "title": "组件命名",
+                "depth": 2,
+                "id": ""
+              }
+            ]
+          },
+          {
+            "title": "元素 (Elements)",
+            "source": "docs/elements.md",
+            "url": "elements.html",
+            "slug": "elements",
+            "headings": [
+              {
+                "title": "元素命名",
+                "depth": 2,
+                "id": "yuan"
+              },
+              {
+                "title": "元素选择器",
+                "depth": 2,
+                "id": "yuan"
+              },
+              {
+                "title": "当多个单词的时候",
+                "depth": 2,
+                "id": ""
+              },
+              {
+                "title": "避免标签选择器",
+                "depth": 2,
+                "id": ""
+              }
+            ]
+          },
+          {
+            "title": "变体 (Variants)",
+            "source": "docs/variants.md",
+            "url": "variants.html",
+            "slug": "variants",
+            "headings": [
+              {
+                "title": "变体命名",
+                "depth": 2,
+                "id": ""
+              },
+              {
+                "title": "元素变体",
+                "depth": 2,
+                "id": "yuan"
+              },
+              {
+                "title": "横杠前缀",
+                "depth": 2,
+                "id": ""
+              }
+            ]
+          },
+          {
+            "title": "嵌套组件 (Nested components)",
+            "source": "docs/nested-components.md",
+            "url": "nested-components.html",
+            "slug": "nested-components",
+            "headings": [
+              {
+                "title": "变体",
+                "depth": 2,
+                "id": ""
+              },
+              {
+                "title": "精简嵌套组件",
+                "depth": 2,
+                "id": ""
+              }
+            ]
+          },
+          {
+            "title": "布局 (Layouts)",
+            "source": "docs/layouts.md",
+            "url": "layouts.html",
+            "slug": "layouts",
+            "headings": [
+              {
+                "title": "避免定位属性",
+                "depth": 2,
+                "id": ""
+              },
+              {
+                "title": "固定尺寸",
+                "depth": 2,
+                "id": ""
+              },
+              {
+                "title": "定位写在父元素中",
+                "depth": 2,
+                "id": "yuan"
+              }
+            ]
+          },
+          {
+            "title": "辅助方法 (Helpers)",
+            "source": "docs/helpers.md",
+            "url": "helpers.html",
+            "slug": "helpers",
+            "headings": [
+              {
+                "title": "辅助方法命名",
+                "depth": 2,
+                "id": ""
+              },
+              {
+                "title": "组织辅助方法",
+                "depth": 2,
+                "id": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "结构 (Structure)",
+        "sections": [
+          {
+            "title": "CSS 结构 (CSS Structure)",
+            "source": "docs/css-structure.md",
+            "url": "css-structure.html",
+            "slug": "css-structure",
+            "headings": [
+              {
+                "title": "一个组件一个文件",
+                "depth": 2,
+                "id": ""
+              },
+              {
+                "title": "使用全局匹配",
+                "depth": 2,
+                "id": ""
+              },
+              {
+                "title": "避免过度的嵌套",
+                "depth": 2,
+                "id": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "笔记",
+        "sections": [
+          {
+            "title": "陷阱 (Pitfalls)",
+            "source": "docs/pitfalls.md",
+            "url": "pitfalls.html",
+            "slug": "pitfalls",
+            "headings": [
+              {
+                "title": "嵌套组件冲突",
+                "depth": 2,
+                "id": ""
+              }
+            ]
+          },
+          {
+            "title": "困惑 (Apprehensions)",
+            "source": "docs/apprehensions.md",
+            "url": "apprehensions.html",
+            "slug": "apprehensions"
+          },
+          {
+            "title": "其他资源 (Other resources)",
+            "source": "docs/other-resources.md",
+            "url": "other-resources.html",
+            "slug": "other-resources",
+            "headings": [
+              {
+                "title": "Other solutions",
+                "depth": 2,
+                "id": "other-solutions",
+                "headings": [
+                  {
+                    "title": "BEM",
+                    "depth": 3,
+                    "id": "bem"
+                  }
+                ]
+              },
+              {
+                "title": "Terminologies",
+                "depth": 2,
+                "id": "terminologies"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "总结 (Summary)",
+        "source": "docs/summary.md",
+        "url": "summary.html",
+        "slug": "summary"
+      }
+    ]
+  },
+  "index": {
+    "index.html": {
+      "source": "README.md",
+      "title": "rscss",
+      "slug": "index",
+      "headings": [
+        {
+          "title": "介绍",
+          "depth": 2,
+          "id": ""
+        }
+      ]
+    },
+    "components.html": {
+      "source": "docs/components.md",
+      "title": "关于组件 (About components)",
+      "slug": "components",
+      "headings": [
+        {
+          "title": "组件命名",
+          "depth": 2,
+          "id": ""
+        }
+      ]
+    },
+    "elements.html": {
+      "source": "docs/elements.md",
+      "title": "元素 (Elements)",
+      "slug": "elements",
+      "headings": [
+        {
+          "title": "元素命名",
+          "depth": 2,
+          "id": "yuan"
+        },
+        {
+          "title": "元素选择器",
+          "depth": 2,
+          "id": "yuan"
+        },
+        {
+          "title": "当多个单词的时候",
+          "depth": 2,
+          "id": ""
+        },
+        {
+          "title": "避免标签选择器",
+          "depth": 2,
+          "id": ""
+        }
+      ]
+    },
+    "variants.html": {
+      "source": "docs/variants.md",
+      "title": "变体 (Variants)",
+      "slug": "variants",
+      "headings": [
+        {
+          "title": "变体命名",
+          "depth": 2,
+          "id": ""
+        },
+        {
+          "title": "元素变体",
+          "depth": 2,
+          "id": "yuan"
+        },
+        {
+          "title": "横杠前缀",
+          "depth": 2,
+          "id": ""
+        }
+      ]
+    },
+    "nested-components.html": {
+      "source": "docs/nested-components.md",
+      "title": "嵌套组件 (Nested components)",
+      "slug": "nested-components",
+      "headings": [
+        {
+          "title": "变体",
+          "depth": 2,
+          "id": ""
+        },
+        {
+          "title": "精简嵌套组件",
+          "depth": 2,
+          "id": ""
+        }
+      ]
+    },
+    "layouts.html": {
+      "source": "docs/layouts.md",
+      "title": "布局 (Layouts)",
+      "slug": "layouts",
+      "headings": [
+        {
+          "title": "避免定位属性",
+          "depth": 2,
+          "id": ""
+        },
+        {
+          "title": "固定尺寸",
+          "depth": 2,
+          "id": ""
+        },
+        {
+          "title": "定位写在父元素中",
+          "depth": 2,
+          "id": "yuan"
+        }
+      ]
+    },
+    "helpers.html": {
+      "source": "docs/helpers.md",
+      "title": "辅助方法 (Helpers)",
+      "slug": "helpers",
+      "headings": [
+        {
+          "title": "辅助方法命名",
+          "depth": 2,
+          "id": ""
+        },
+        {
+          "title": "组织辅助方法",
+          "depth": 2,
+          "id": ""
+        }
+      ]
+    },
+    "css-structure.html": {
+      "source": "docs/css-structure.md",
+      "title": "CSS 结构 (CSS Structure)",
+      "slug": "css-structure",
+      "headings": [
+        {
+          "title": "一个组件一个文件",
+          "depth": 2,
+          "id": ""
+        },
+        {
+          "title": "使用全局匹配",
+          "depth": 2,
+          "id": ""
+        },
+        {
+          "title": "避免过度的嵌套",
+          "depth": 2,
+          "id": ""
+        }
+      ]
+    },
+    "pitfalls.html": {
+      "source": "docs/pitfalls.md",
+      "title": "陷阱 (Pitfalls)",
+      "slug": "pitfalls",
+      "headings": [
+        {
+          "title": "嵌套组件冲突",
+          "depth": 2,
+          "id": ""
+        }
+      ]
+    },
+    "apprehensions.html": {
+      "source": "docs/apprehensions.md",
+      "title": "困惑 (Apprehensions)",
+      "slug": "apprehensions"
+    },
+    "other-resources.html": {
+      "source": "docs/other-resources.md",
+      "title": "其他资源 (Other resources)",
+      "slug": "other-resources",
+      "headings": [
+        {
+          "title": "Other solutions",
+          "depth": 2,
+          "id": "other-solutions",
+          "headings": [
+            {
+              "title": "BEM",
+              "depth": 3,
+              "id": "bem"
+            }
+          ]
+        },
+        {
+          "title": "Terminologies",
+          "depth": 2,
+          "id": "terminologies"
+        }
+      ]
+    },
+    "summary.html": {
+      "source": "docs/summary.md",
+      "title": "总结 (Summary)",
+      "slug": "summary"
+    }
+  },
+  "sources": {
+    "README.md": "index.html",
+    "docs/components.md": "components.html",
+    "docs/elements.md": "elements.html",
+    "docs/variants.md": "variants.html",
+    "docs/nested-components.md": "nested-components.html",
+    "docs/layouts.md": "layouts.html",
+    "docs/helpers.md": "helpers.html",
+    "docs/css-structure.md": "css-structure.html",
+    "docs/pitfalls.md": "pitfalls.html",
+    "docs/apprehensions.md": "apprehensions.html",
+    "docs/other-resources.md": "other-resources.html",
+    "docs/summary.md": "summary.html",
+    "docs/docpress.json": "docpress.json",
+    "docs/images/component-elements.png": "images/component-elements.png",
+    "docs/images/component-modifiers.png": "images/component-modifiers.png",
+    "docs/images/component-example.png": "images/component-example.png",
+    "docs/images/component-nesting.png": "images/component-nesting.png",
+    "docs/images/layouts.png": "images/layouts.png"
+  }
+}

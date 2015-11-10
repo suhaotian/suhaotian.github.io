@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/style.css?t=8a41d573">
+    <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
+    <script src="assets/script.js?t=74596582"></script>
+    <title>其他资源 (Other resources)</title>
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="body page-other-resources">
+        <div class="header-nav">
+          <div class="right"><a href="https://github.com/rstacruz/rscss" data-title="rstacruz/rscss" class="iconlink">
+              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
+          </div>
+        </div>
+        <div class="markdown-body"><h1 id="other-resources">Other resources</h1>
+<ul>
+<li><a href="https://speakerdeck.com/dafed/managing-css-projects-with-itcss#49">ITCSS</a> (&quot;Inverted Triangle CSS&quot;) is a nice complement to any rscss structure.</li>
+</ul>
+<h2 id="other-solutions">Other solutions</h2>
+<h3 id="bem">BEM</h3>
+<p><a href="http://bem.info/">BEM</a> is nice, but some may be irked at its unconventional syntax. RSCSS pretty much follows BEM conventions, only with a different syntax.</p>
+<pre><code class="lang-html"><span class="pl-c">&lt;!-- BEM --&gt;</span>
+<span class="hljs-tag">&lt;<span class="pl-ent">form</span> <span class="pl-e">class</span>=<span class="pl-s">&apos;site-search site-search--full&apos;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="pl-ent">input</span>  <span class="pl-e">class</span>=<span class="pl-s">&apos;site-search__field&apos;</span> <span class="pl-e">type</span>=<span class="pl-s">&apos;text&apos;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="pl-ent">button</span> <span class="pl-e">class</span>=<span class="pl-s">&apos;site-search__button&apos;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="pl-ent">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="pl-ent">form</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-html"><span class="pl-c">&lt;!-- rscss --&gt;</span>
+<span class="hljs-tag">&lt;<span class="pl-ent">form</span> <span class="pl-e">class</span>=<span class="pl-s">&apos;site-search -full&apos;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="pl-ent">input</span>  <span class="pl-e">class</span>=<span class="pl-s">&apos;field&apos;</span> <span class="pl-e">type</span>=<span class="pl-s">&apos;text&apos;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="pl-ent">button</span> <span class="pl-e">class</span>=<span class="pl-s">&apos;button&apos;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="pl-ent">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="pl-ent">form</span>&gt;</span>
+</code></pre>
+<h2 id="terminologies">Terminologies</h2>
+<p>The same concepts exist in similar ways in other CSS structuring ideologies.</p>
+<table>
+<thead>
+<tr>
+<th>RSCSS</th>
+<th>BEM</th>
+<th>SMACSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Component</td>
+<td>Block</td>
+<td>Module</td>
+</tr>
+<tr>
+<td>Element</td>
+<td>Element</td>
+<td>Sub-Component</td>
+</tr>
+<tr>
+<td>Layout</td>
+<td>?</td>
+<td>Layout</td>
+</tr>
+<tr>
+<td>Variant</td>
+<td>Modifier</td>
+<td>Sub-Module &amp; State</td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+        <div class="footer-nav">
+          <div class="left"><a href="apprehensions.html"><span class="title">困惑 (Apprehensions)</span></a></div>
+          <div class="right"><a href="summary.html"><span class="label">Next: </span><span class="title">总结 (Summary)</span></a></div>
+        </div>
+      </div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1"><a href="index.html" class="link title  link-index">rscss</a>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">组件 (Components) </span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="components.html" class="link title  link-components">关于组件 (About components)</a>
+                </li>
+                <li class="menu-item -level-2"><a href="elements.html" class="link title  link-elements">元素 (Elements)</a>
+                </li>
+                <li class="menu-item -level-2"><a href="variants.html" class="link title  link-variants">变体 (Variants)</a>
+                </li>
+                <li class="menu-item -level-2"><a href="nested-components.html" class="link title  link-nested-components">嵌套组件 (Nested components)</a>
+                </li>
+                <li class="menu-item -level-2"><a href="layouts.html" class="link title  link-layouts">布局 (Layouts)</a>
+                </li>
+                <li class="menu-item -level-2"><a href="helpers.html" class="link title  link-helpers">辅助方法 (Helpers)</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">结构 (Structure)</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="css-structure.html" class="link title  link-css-structure">CSS 结构 (CSS Structure)</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">笔记</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="pitfalls.html" class="link title  link-pitfalls">陷阱 (Pitfalls)</a>
+                </li>
+                <li class="menu-item -level-2"><a href="apprehensions.html" class="link title  link-apprehensions">困惑 (Apprehensions)</a>
+                </li>
+                <li class="menu-item -level-2"><a href="other-resources.html" class="link title -active link-other-resources">其他资源 (Other resources)</a>
+                  <ul class="headings heading-list">
+                    <li class="heading-item -depth-2"><a href="#other-solutions" class="hlink link-other-solutions">Other solutions</a>
+                      <ul class="heading-list -depth-2">
+                        <li class="heading-item -depth-3"><a href="#bem" class="hlink link-bem">BEM</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="heading-item -depth-2"><a href="#terminologies" class="hlink link-terminologies">Terminologies</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1"><a href="summary.html" class="link title  link-summary">总结 (Summary)</a>
+            </li>
+          </ul>
+        </li>
+      </div>
+    </div>
+  </body>
+</html>

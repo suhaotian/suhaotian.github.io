@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/style.css?t=8a41d573">
+    <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
+    <script src="assets/script.js?t=74596582"></script>
+    <title>CSS 结构 (CSS Structure)</title>
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="body page-css-structure">
+        <div class="header-nav">
+          <div class="right"><a href="https://github.com/rstacruz/rscss" data-title="rstacruz/rscss" class="iconlink">
+              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
+          </div>
+        </div>
+        <div class="markdown-body"><h1 id="css">CSS &#x7ED3;&#x6784;</h1>
+<h2 id="">&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;</h2>
+<p>&#x5BF9;&#x4E8E;&#x6BCF;&#x4E2A;&#x7EC4;&#x4EF6;&#xFF0C;&#x5C06;&#x5B83;&#x4EEC;&#x653E;&#x5728;&#x5B83;&#x4EEC;&#x81EA;&#x5DF1;&#x7684;&#x6587;&#x4EF6;&#x91CC;&#x9762;&#x3002;</p>
+<pre><code class="lang-scss"><span class="pl-c">/* css/components/search-form.scss */</span>
+<span class="hljs-class">.search-form</span> {
+  &gt; <span class="hljs-class">.button</span> { <span class="pl-c">/* ... */</span> }
+  &gt; <span class="hljs-class">.field</span> { <span class="pl-c">/* ... */</span> }
+  &gt; <span class="hljs-class">.label</span> { <span class="pl-c">/* ... */</span> }
+
+  <span class="pl-c">// variants</span>
+  &amp;<span class="hljs-class">.-small</span> { <span class="pl-c">/* ... */</span> }
+  &amp;<span class="hljs-class">.-wide</span> { <span class="pl-c">/* ... */</span> }
+}
+</code></pre>
+<h2 id="">&#x4F7F;&#x7528;&#x5168;&#x5C40;&#x5339;&#x914D;</h2>
+<p>&#x5728; sass-rails &#x548C; stylus &#x4E2D;&#xFF08;sass-rails &#x548C; stylus &#x90FD;&#x662F; CSS &#x9884;&#x5904;&#x7406;&#x5668;&#xFF09;&#xFF0C;&#x5305;&#x542B;&#x5B83;&#x4EEC;&#x662F;&#x5982;&#x6B64;&#x7B80;&#x5355;&#xFF1A;</p>
+<pre><code class="lang-scss"><span class="hljs-at_rule">@<span class="pl-k">import</span> <span class="pl-s">&apos;components/*&apos;</span>;</span>
+</code></pre>
+<h2 id="">&#x907F;&#x514D;&#x8FC7;&#x5EA6;&#x7684;&#x5D4C;&#x5957;</h2>
+<p>&#x5D4C;&#x5957;&#x4E0D;&#x8981;&#x8D85;&#x8FC7;2&#x7EA7;&#x3002;&#x8FC7;&#x591A;&#x7684;&#x5D4C;&#x5957;&#x4F1A;&#x5F88;&#x5BB9;&#x6613;&#x53D8;&#x5F97;&#x4E0D;&#x53EF;&#x7EF4;&#x62A4;&#x3002;</p>
+<pre><code class="lang-scss"><span class="pl-c">/* &#x2717; &#x907F;&#x514D;3&#x7EA7;&#x5D4C;&#x5957; */</span>
+<span class="hljs-class">.image-frame</span> {
+  &gt; <span class="hljs-class">.description</span> {
+    <span class="pl-c">/* ... */</span>
+
+    &gt; <span class="hljs-class">.icon</span> {
+      <span class="pl-c">/* ... */</span>
+    }
+  }
+}
+
+<span class="pl-c">/* &#x2713; &#x66F4;&#x597D;&#xFF1A;2&#x7EA7;&#x5D4C;&#x5957;*/</span>
+<span class="hljs-class">.image-frame</span> {
+  &gt; <span class="hljs-class">.description</span> { <span class="pl-c">/* ... */</span> }
+  &gt; <span class="hljs-class">.description</span> &gt; <span class="hljs-class">.icon</span> { <span class="pl-c">/* ... */</span> }
+}
+</code></pre>
+
+        </div>
+        <div class="footer-nav">
+          <div class="left"><a href="helpers.html"><span class="title">辅助方法 (Helpers)</span></a></div>
+          <div class="right"><a href="pitfalls.html"><span class="label">Next: </span><span class="title">陷阱 (Pitfalls)</span></a></div>
+        </div>
+      </div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1"><a href="index.html" class="link title  link-index">rscss</a>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">组件 (Components) </span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="components.html" class="link title  link-components">关于组件 (About components)</a>
+                </li>
+                <li class="menu-item -level-2"><a href="elements.html" class="link title  link-elements">元素 (Elements)</a>
+                </li>
+                <li class="menu-item -level-2"><a href="variants.html" class="link title  link-variants">变体 (Variants)</a>
+                </li>
+                <li class="menu-item -level-2"><a href="nested-components.html" class="link title  link-nested-components">嵌套组件 (Nested components)</a>
+                </li>
+                <li class="menu-item -level-2"><a href="layouts.html" class="link title  link-layouts">布局 (Layouts)</a>
+                </li>
+                <li class="menu-item -level-2"><a href="helpers.html" class="link title  link-helpers">辅助方法 (Helpers)</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">结构 (Structure)</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="css-structure.html" class="link title -active link-css-structure">CSS 结构 (CSS Structure)</a>
+                  <ul class="headings heading-list">
+                    <li class="heading-item -depth-2"><a href="#" class="hlink link-">一个组件一个文件</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a href="#" class="hlink link-">使用全局匹配</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a href="#" class="hlink link-">避免过度的嵌套</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">笔记</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="pitfalls.html" class="link title  link-pitfalls">陷阱 (Pitfalls)</a>
+                </li>
+                <li class="menu-item -level-2"><a href="apprehensions.html" class="link title  link-apprehensions">困惑 (Apprehensions)</a>
+                </li>
+                <li class="menu-item -level-2"><a href="other-resources.html" class="link title  link-other-resources">其他资源 (Other resources)</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1"><a href="summary.html" class="link title  link-summary">总结 (Summary)</a>
+            </li>
+          </ul>
+        </li>
+      </div>
+    </div>
+  </body>
+</html>

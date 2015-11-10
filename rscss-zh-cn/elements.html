@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/style.css?t=8a41d573">
+    <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
+    <script src="assets/script.js?t=74596582"></script>
+    <title>元素 (Elements)</title>
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="body page-elements">
+        <div class="header-nav">
+          <div class="right"><a href="https://github.com/rstacruz/rscss" data-title="rstacruz/rscss" class="iconlink">
+              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
+          </div>
+        </div>
+        <div class="markdown-body"><h1 id="yuan">&#x5143;&#x7D20;</h1>
+<p>&#x7EC4;&#x4EF6;&#x7531;&#x5143;&#x7D20;&#x7EC4;&#x6210;&#x3002;</p>
+<p><img src="images/component-elements.png" alt=""></p>
+<h2 id="yuan">&#x5143;&#x7D20;&#x547D;&#x540D;</h2>
+<p>&#x6BCF;&#x4E2A;&#x7EC4;&#x4EF6;&#x90FD;&#x53EF;&#x80FD;&#x4F1A;&#x6709;&#x5143;&#x7D20;&#x3002;&#x5143;&#x7D20;&#x7684;&#x7C7B;&#x5E94;&#x8BE5;&#x53EA;&#x6709; <strong>&#x4E00;&#x4E2A;&#x5355;&#x8BCD;</strong>&#x3002;</p>
+<pre><code class="lang-scss"><span class="hljs-class">.search-form</span> {
+  &gt; <span class="hljs-class">.field</span> { <span class="pl-c">/* ... */</span> }
+  &gt; <span class="hljs-class">.action</span> { <span class="pl-c">/* ... */</span> }
+}
+</code></pre>
+<h2 id="yuan">&#x5143;&#x7D20;&#x9009;&#x62E9;&#x5668;</h2>
+<p>&#x5C3D;&#x53EF;&#x80FD;&#x4F7F;&#x7528; <code>&gt;</code> &#x5B50;&#x9009;&#x62E9;&#x5668;&#x3002;&#x8FD9;&#x53EF;&#x4EE5;&#x9632;&#x6B62;&#x5185;&#x5D4C;&#x7EC4;&#x4EF6;&#x51B2;&#x7A81;&#xFF0C;&#x6027;&#x80FD;&#x4E5F;&#x6BD4;&#x540E;&#x4EE3;&#x9009;&#x62E9;&#x5668;&#x597D;&#x3002;</p>
+<pre><code class="lang-scss"><span class="hljs-class">.article-card</span> {
+  <span class="hljs-class">.title</span>     { <span class="pl-c">/* &#x53EF;&#x4EE5; */</span> }
+  &gt; <span class="hljs-class">.author</span>  { <span class="pl-c">/* &#x2713; &#x66F4;&#x597D; */</span> }
+}
+</code></pre>
+<h2 id="">&#x5F53;&#x591A;&#x4E2A;&#x5355;&#x8BCD;&#x7684;&#x65F6;&#x5019;</h2>
+<p>&#x5F53;&#x6709;&#x4E24;&#x4E2A;&#x6216;&#x66F4;&#x591A;&#x5355;&#x8BCD;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E0D;&#x8981;&#x4F7F;&#x7528;&#x6A2A;&#x6760;&#x6216;&#x8005;&#x4E0B;&#x5212;&#x7EBF;&#x8FDE;&#x63A5;&#xFF0C;&#x76F4;&#x63A5;&#x5199;&#x5728;&#x4E00;&#x8D77;&#x3002;</p>
+<pre><code class="lang-scss"><span class="hljs-class">.profile-box</span> {
+  &gt; <span class="hljs-class">.firstname</span> { <span class="pl-c">/* ... */</span> }
+  &gt; <span class="hljs-class">.lastname</span> { <span class="pl-c">/* ... */</span> }
+  &gt; <span class="hljs-class">.avatar</span> { <span class="pl-c">/* ... */</span> }
+}
+</code></pre>
+<h2 id="">&#x907F;&#x514D;&#x6807;&#x7B7E;&#x9009;&#x62E9;&#x5668;</h2>
+<p>&#x5C3D;&#x53EF;&#x80FD;&#x4F7F;&#x7528;&#x7C7B;&#x540D;&#x3002;&#x6807;&#x7B7E;&#x9009;&#x62E9;&#x5668;&#x6CA1;&#x95EE;&#x9898;&#xFF0C;&#x4F46;&#x662F;&#x53EF;&#x80FD;&#x4F1A;&#x6709;&#x6027;&#x80FD;&#x4E0A;&#x7684;&#x635F;&#x8017;&#x800C;&#x4E14;&#x4E0D;&#x662F;&#x975E;&#x5E38;&#x8BED;&#x610F;&#x5316;&#x3002;</p>
+<pre><code class="lang-scss"><span class="hljs-class">.article-card</span> {
+  &gt; <span class="hljs-tag">h3</span>    { <span class="pl-c">/* &#x2717; &#x907F;&#x514D;&#x8FD9;&#x6837; */</span> }
+  &gt; <span class="hljs-class">.name</span> { <span class="pl-c">/* &#x2713; &#x66F4;&#x597D; */</span> }
+}
+</code></pre>
+<p class="pull-box">&#x4E0D;&#x662F;&#x6240;&#x6709;&#x7684;&#x5143;&#x7D20;&#x90FD;&#x5E94;&#x8BE5;&#x8FD9;&#x6837;&#x3002; &#x53D8;&#x4F53;&#x4E5F;&#x5F88;&#x6709;&#x7528;&#xFF08;&#x53D8;&#x4F53;&#xFF1A;Variants&#xFF0C;&#x8FD9;&#x91CC;&#x7FFB;&#x8BD1;&#x4E3A;&#x53D8;&#x4F53;&#xFF09;&#x3002;
+<a href="variants.html">&#x7EE7;&#x7EED; &#x2192;</a></p>
+
+        </div>
+        <div class="footer-nav">
+          <div class="left"><a href="components.html"><span class="title">关于组件 (About components)</span></a></div>
+          <div class="right"><a href="variants.html"><span class="label">Next: </span><span class="title">变体 (Variants)</span></a></div>
+        </div>
+      </div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1"><a href="index.html" class="link title  link-index">rscss</a>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">组件 (Components) </span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="components.html" class="link title  link-components">关于组件 (About components)</a>
+                </li>
+                <li class="menu-item -level-2"><a href="elements.html" class="link title -active link-elements">元素 (Elements)</a>
+                  <ul class="headings heading-list">
+                    <li class="heading-item -depth-2"><a href="#yuan" class="hlink link-yuan">元素命名</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a href="#yuan" class="hlink link-yuan">元素选择器</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a href="#" class="hlink link-">当多个单词的时候</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a href="#" class="hlink link-">避免标签选择器</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2"><a href="variants.html" class="link title  link-variants">变体 (Variants)</a>
+                </li>
+                <li class="menu-item -level-2"><a href="nested-components.html" class="link title  link-nested-components">嵌套组件 (Nested components)</a>
+                </li>
+                <li class="menu-item -level-2"><a href="layouts.html" class="link title  link-layouts">布局 (Layouts)</a>
+                </li>
+                <li class="menu-item -level-2"><a href="helpers.html" class="link title  link-helpers">辅助方法 (Helpers)</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">结构 (Structure)</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="css-structure.html" class="link title  link-css-structure">CSS 结构 (CSS Structure)</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">笔记</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="pitfalls.html" class="link title  link-pitfalls">陷阱 (Pitfalls)</a>
+                </li>
+                <li class="menu-item -level-2"><a href="apprehensions.html" class="link title  link-apprehensions">困惑 (Apprehensions)</a>
+                </li>
+                <li class="menu-item -level-2"><a href="other-resources.html" class="link title  link-other-resources">其他资源 (Other resources)</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1"><a href="summary.html" class="link title  link-summary">总结 (Summary)</a>
+            </li>
+          </ul>
+        </li>
+      </div>
+    </div>
+  </body>
+</html>
