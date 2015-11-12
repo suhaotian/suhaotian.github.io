@@ -1,0 +1,240 @@
+@import '_lib/header.scss';
+
+.trs180 {
+	display: inline-block;
+}
+
+html,body {
+	min-height: 100%;
+}
+
+
+.headimg {
+	position: relative;
+	width: 140px;
+	
+	img {
+		width: 100%;
+	}
+
+	.hd {
+		position: absolute;
+		
+		top: 7px;
+		left: 4px;
+		right: 6px;
+		bottom: 4px;
+		border-radius: 50%;
+		overflow: hidden;
+
+		img {
+			border-radius: 50%;
+		}
+
+	}
+}
+
+.container {
+	background: #dededb;
+	padding: 0 12px 12px 12px;
+	min-height: 100%;
+	.headimg {
+		margin: -75px 0 0 0;
+	}
+	.wrap {
+		min-height: 100%;
+		border-top: 14px solid #dededb;
+		background: #fff;
+		padding: 0 20px 20px;
+		.headimg {
+			margin: -85px 0 0 0;
+		}
+	}
+}
+
+.winputs {
+	margin: 20px 0;
+	border-bottom: 1px solid #ddd;
+	.finput {
+		position: relative;
+		border: 1px solid #ddd;
+		border-bottom: 0;
+		font-size: 25px;
+		padding: 6px 28px 6px 0;
+		overflow: hidden;
+		white-space: nowrap;
+		&:active {
+			background: #f3f3f3;
+			opacity: .8;
+		}
+		.f-icon {
+			width: 135px;
+			padding: 12px 8px;
+			white-space: nowrap;
+			float: left;
+			border-right: 1px solid #ccc;
+			margin-right: 8px;
+		}
+		.val {
+			position: relative;
+			top: 12px;
+			flex: 1;
+			overflow: hidden;
+			display: inline-block;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			color: #999;
+		}
+	
+		i {
+			color: red;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			font-size: 18px;
+			background: #fff;
+			padding: 14px;
+			transform: translate(0, -50%) rotate(180deg);
+		}
+	}
+	.link2 {
+		color: red;
+		display: inline-block;
+		position: relative;
+		top: 14px;
+		margin-right: 28px;
+		position: relative;
+		&:before {
+			content: '';
+			display: block;
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background: red;
+			position: absolute;
+			left: -14px;
+			top: 50%;
+			transform: translate(0, -50%)
+		}
+	}
+	.wlink {
+		width: 120px;
+	}
+}
+%a {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: text-ellipsis;
+	background: #fff;
+	font-size: 28px;
+	color: #666;
+	padding: 16px 0;
+	
+	&:active {
+		color: red;
+		background: #f3f3f3;
+		i {
+			color: red;
+		}
+	}
+}
+
+.wrapa {
+	a {
+		display: block;
+		@extend %a;
+	}
+	.wa {
+		margin-top: 8px;
+		display: flex;
+		margin-bottom: 14px;
+		a {
+			flex: 1;
+			width: 33.333%;
+			text-align: center;
+			border: 1px solid #ccc;
+			&:nth-child(2) {
+				margin: 0 14px;
+			}
+		}
+	}
+
+	.cella {
+		margin-bottom: 14px;
+	}
+
+	.icon-zuojiantou{
+		float: right;
+		color: red;
+		font-size: 24px;
+		margin-top: 4px;
+		margin-right: 8px;
+	}
+	
+	.licon {
+		float: left;
+		font-size: 32px;
+		display: inline-block;
+		width: 54px;
+		text-align: center;
+	}
+	
+	.wcell {
+		display: flex;
+		.lcell {
+			background: #fff;
+			width: 33.333%;
+			
+			overflow: hidden;
+			position: relative;
+			a {
+				margin-bottom: 14px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+		.rcell {
+			flex: 1;
+			width: 66.6666%;
+			margin-left: 14px;
+			a:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		.cell2 {
+			text-align: center;
+			display: flex;
+			margin-bottom: 14px;
+			a {
+				flex: 1;
+				&:first-child {
+					margin-right: 14px;
+				}
+			}
+		}
+
+		.cell3 {
+			a {
+				margin-bottom: 14px;
+				padding-left: 14px;
+			}
+		}
+
+
+
+	}
+}
+
+.b0 {
+	margin-bottom: 0 !important;
+}
+
+.icon-daishouhuo,.icon-daipingjia {
+	font-size: 34px !important;
+}
+
+.icon-huanhuo {
+	font-size: 30px !important;
+}

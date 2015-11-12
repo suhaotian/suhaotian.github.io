@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>未命名</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0,minimal-ui">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link rel="shortcut icon" type="imagse/x-icon" href="./favicon.ico">
+	<link rel="apple-touch-icon-precomposed" sshref="xx/touch-icon.png">
+
+	<link rel="stylesheet" href="./Styles/lib/normalize.css">
+	<link rel="stylesheet" href="./Styles/lib/swiper.min.css">
+	<link rel="stylesheet" href="./Font/iconfont.css">
+	<link rel="stylesheet" href="./Styles/lib/media.css">
+	<link rel="stylesheet" href="./Styles/index.css">
+	<script src="./Js/jquery-1.4.1.min.js"></script>
+	<script src="./Js/swiper.min.js"></script>
+	<!-- // <script src="./Js/scrollReveal.min.js"></script> -->
+	<script>
+	$(function(){
+
+		// 点击菜单 js
+		$('.js-menu').click(function(){
+			var tmp1 = $('.js-menu-cover');
+			var close = tmp1.find('.js-close');
+			if(tmp1.hasClass('active')) {
+				tmp1.removeClass('active');
+				$('body').removeClass('overhidden');
+			} else {
+				tmp1.addClass('active');
+				$('body').addClass('overhidden');
+				close.off('click');
+			}
+
+			close.click(function(){
+				tmp1.removeClass('active');
+				$('body').removeClass('overhidden');
+				close.off('click');
+			})
+		})
+		// banner
+    var swiper = new Swiper('.swiper-container', {
+    		lazyLoading: true,
+    		autoplay: 3500,
+    	  pagination: '.swiper-pagination',
+        paginationClickable: true
+    });
+
+    // 动态设置搜索
+    $('.search input').focus(function(){
+    	
+    	$(this).addClass('focus');
+    }).blur(function(){
+    	if(!$(this).val()) {
+    		$(this).removeClass('focus');
+    	}
+    });
+
+
+    $('.js-active > li').click(function(){
+    	var $me = $(this);
+    	$me.addClass('active').siblings().removeClass('active');
+    });
+
+	});
+	</script>
+	
+</head>
+<body>
+	<!-- 返回顶部锚点 -->
+	<div id="toTop"></div>
+	
+	<!-- 隐藏菜单 -->
+		<div class="menu-cover js-menu-cover">
+			<div class="close js-close"><i class="iconfont icon-close"></i></div>
+			<div class="menu-wrap">
+				菜单
+			</div>
+		</div>
+	<!-- 隐藏菜单结束 -->
+	<header>
+		<div class="nav-top">
+			<div class="licons">
+				<a href="javascript:;" class="i i1"><i class="iconfont icon-fanhui"></i></a>
+			</div>
+			<div class="tit"><span>购物</span></div>
+			<div class="ricons">
+				<a href="javascript:;" class="i i2 js-menu"><i class="iconfont icon-menu"></i></a>
+				<a href="javascript:;" class="i i3"><i class="iconfont icon-xiaoxi"></i></a>
+			</div>
+		</div>
+	</header>
+
+	
+	<!-- banner 图片高度要一致：290px -->
+	<div class="banner">
+		<div class="swiper-container swiper-container-horizontal">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<a href="">
+						<img data-src="./Images/img/banner-1.png" alt="" class="swiper-lazy">
+					</a>
+					<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+				</div>
+				<div class="swiper-slide">
+					<a href="">
+						<img data-src="./Images/img/banner.png" alt="" class="swiper-lazy">
+						
+					</a>
+					<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+	</div>
+
+	<div class="menu2 js-menu2">
+		<ul class="js-active">
+			<li>
+				<div class="w">
+					<img src="./Images/images/circle.png" alt="">
+					<a href=""></a>
+					<div class="a">
+						<i class="iconfont icon-gonggaofuzhi"></i>
+						<div class="text"><span>个人中心</span></div>
+					
+				</div>
+			</li>
+			<li class="active">
+				<div class="w">
+					<img src="./Images/images/circle.png" alt="">
+					<a href=""></a>
+					<div class="a">
+						<i class="iconfont icon-418hezuotongdao"></i>
+						<div class="text"><span>招商代理</span></div>
+					
+				</div>
+			</li>
+			<li>
+				<div class="w">
+					<img src="./Images/images/circle.png" alt="">
+					<a href=""></a>
+					<div class="a">
+						<i class="iconfont icon-gouwuche"></i>
+						<div class="text"><span>购物车</span></div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="w">
+					<img src="./Images/images/circle.png" alt="">
+					<a href=""></a>
+					<div class="a">
+						<i class="iconfont icon-icon83"></i>
+						<div class="text"><span>积分兑换</span></div>
+					</div>
+					
+				</div>
+			</li>
+		</ul>
+		<div class="search">
+			<div class="winput">
+				<input type="text" placeholder="大声世纪智联欢迎您">
+				<i class="iconfont icon-sousuo"></i>
+			</div>
+		</div>
+	</div>
+	
+	<!-- floor one -->
+	<div class="b1">
+		<img src="./Images/img/bc-1.png" alt="" class="img-full">
+		<div class="bc bc1">
+			<ul>
+				<li>
+					<div class="w">
+						<a href="" class="abs-link"></a>
+						<span class="tip">领</span>
+						<div class="con">
+							￥<span class="unit">190</span>
+							<div class="use">满299元使用</div>
+							<!-- <div class="date">2015.08.28-2015-.09.29</div> -->
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="w">
+						<a href="" class="abs-link"></a>
+						<span class="tip">领</span>
+						<div class="con">
+							￥<span class="unit">20</span>
+							<div class="use">满999元使用</div>
+							<!-- <div class="date">2015.08.28-2015-.09.29</div> -->
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="w">
+						<a href="" class="abs-link"></a>
+						<span class="tip">领</span>
+						<div class="con">
+							￥<span class="unit">2000</span>
+							<div class="use">满9999元使用</div>
+							<!-- <div class="date">2015.08.28-2015-.09.29</div> -->
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- 楼层一 -->
+	<div class="floor">
+		<div class="fl-top">
+			<div class="wordimg">
+				<img src="./Images/images/tit22.png" alt="" class="img-full">
+			</div>
+			<div class="leftimg">
+				<img src="./Images/images/circle.png" alt="" class="tempimg">
+				<img src="./Images/images/1.png" alt="" class="img-c">
+			</div>
+			<a href="" class="more">MORE+</a>
+		</div>
+		<div class="fl-con">
+			<div class="left">
+				<div class="panel">
+					<img src="./Images/img/panel11.png" alt="" class="img-full">
+				</div>
+				<div class="wimg">
+					<a href="" class="half-link"></a>
+					<a href="" class="half-link"></a>
+					<div class="borderline"></div>
+					<img src="./Images/img/top.png" alt="">
+					<img src="./Images/img/bottom.png" alt="">
+				</div>
+			</div>
+			<div class="right">
+				<a href="" class="abs-link"></a>
+				<img src="./Images/img/test1.png" alt="">
+			</div>
+		</div>
+	</div>
+
+	<div class="mt3">
+		<ul>
+			<li>
+				<!-- 图片比例： 1:1  -->
+				<div class="w" style="background-image: url(./Images/images/mt3.png)">
+					<img src="./Images/images/circle.png" alt="" class="tempimg">
+						<div class="wc">
+							<div class="wcc">
+								<div class="borderbtn">
+									<span class="topborder"></span>
+									<span class="bottomborder"></span>
+									<span class="txt">爆款单品</span>
+								</div>
+								<span class="tipbtn red2">
+									<span class="txt2">直降50</span>
+								</span>
+							</div>
+						</div>
+				</div>
+			</li>
+			<li>
+				<!-- 背景图片比例： 1:1  -->
+				<div class="w" style="background-image: url(./Images/images/mt3.png)">
+					<img src="./Images/images/circle.png" alt="" class="tempimg">
+						<div class="wc">
+							<div class="wcc">
+								<div class="borderbtn">
+									<span class="topborder"></span>
+									<span class="bottomborder"></span>
+									<span class="txt">手机专享</span>
+								</div>
+								<span class="tipbtn red2">
+									<span class="txt2">立即抢购</span>
+								</span>
+							</div>
+						</div>
+				</div>
+			</li>
+			<li>
+				<div class="w newer" style="background-image: url(./Images/images/mt3.png)">
+					<img src="./Images/images/circle.png" alt="" class="tempimg">
+					<div class="wc">
+						<div class="newc">
+							<img src="./Images/images/circle.png" alt="" class="tempimg">
+							<div class="newcc red2">
+								<div class="abs">
+									<div class="xt">新品抢先看</div>
+									<div class="small">10.27新品</div>
+									<div class="arrowdown"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<div class="margin5"></div>
+	
+	<div class="floor">
+		<div class="fl-top">
+			<div class="wordimg">
+				<img src="./Images/images/tit11.png" alt="" class="img-full">
+			</div>
+			<div class="leftimg">
+				<img src="./Images/images/circle.png" alt="" class="tempimg">
+				<img src="./Images/images/2.png" alt="" class="img-c">
+			</div>
+			<a href="" class="more">MORE+</a>
+		</div>
+		<div class="fl-con2">
+			<div class="left">
+				<div class="panel">
+					<img src="./Images/img/panel22.png" alt="" class="img-full">
+				</div>
+				<div class="wimg">
+					<img src="./Images/img/fl11.png" alt="">
+				</div>
+			</div>
+			<div class="right">
+				
+				<div class="wimg">
+					<div class="borderline"></div>
+					<img src="./Images/img/fl12.png" alt="">
+					<img src="./Images/img/fl13.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- 零食 -->
+	<div class="mf4 lingshi">
+		<ul class="js-active">
+			<li>
+				<div class="w">
+					<div class="topt">
+						进口零食
+					</div>
+					<div class="icon">
+						<i class="iconfont icon-lingshi1"></i>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="w">
+					<div class="topt">
+						办公零食
+					</div>
+					<div class="icon">
+						<i class="iconfont icon-lingshi2"></i>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="w">
+					<div class="topt">
+						糕点点心
+					</div>
+					<div class="icon">
+						<i class="iconfont icon-lingshi"></i>
+					</div>
+				</div>
+			</li>
+			<li class="active">
+				<div class="w">
+					<div class="topt">
+						酒水饮料
+					</div>
+					<div class="icon">
+						<i class="iconfont icon-jiushuiyinliao"></i>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<div class="margin5"></div>
+
+	<!-- 楼层图片比例说明，宽度必须一样；两张图片一栏的图片高度是一张一栏图片高度的一半，也就是高比例是 1:2。 -->
+	<div class="floor">
+		<div class="fl-top">
+			<div class="wordimg">
+				<img src="./Images/images/panel.png" alt="" class="img-full">
+			</div>
+			<div class="leftimg">
+				<img src="./Images/images/circle.png" alt="" class="tempimg">
+				<img src="./Images/images/3.png" alt="" class="img-c">
+			</div>
+			<a href="" class="more">MORE+</a>
+		</div>
+		<div class="fl-con">
+			<div class="left">
+				<div class="panel">
+					<img src="./Images/images/panel-tit.png" alt="" class="img-full">
+				</div>
+				<div class="wimg">
+					<a href="" class="half-link"></a>
+					<a href="" class="half-link"></a>
+					<div class="borderline"></div>
+					<img src="./Images/img/fl2.png" alt="">
+					<img src="./Images/img/fl3.png" alt="">
+				</div>
+			</div>
+			<div class="right">
+				<a href="" class="abs-link"></a>
+				<img src="./Images/img/fl1.png" alt="">
+			</div>
+		</div>
+	</div>
+
+
+	<div class="mt3">
+		<ul>
+			<li>
+				<!-- 图片比例： 1:1  -->
+				<div class="w" style="background-image: url(./Images/images/mt3.png)">
+					<img src="./Images/images/circle.png" alt="" class="tempimg">
+						<div class="wc">
+							<div class="wcc">
+								<div class="borderbtn">
+									<span class="topborder"></span>
+									<span class="bottomborder"></span>
+									<span class="txt">爆款单品</span>
+								</div>
+								<span class="tipbtn orange">
+									<span class="txt2">直降50</span>
+								</span>
+							</div>
+						</div>
+				</div>
+			</li>
+			<li>
+				<!-- 背景图片比例： 1:1  -->
+				<div class="w" style="background-image: url(./Images/images/mt3.png)">
+					<img src="./Images/images/circle.png" alt="" class="tempimg">
+						<div class="wc">
+							<div class="wcc">
+								<div class="borderbtn">
+									<span class="topborder"></span>
+									<span class="bottomborder"></span>
+									<span class="txt">手机专享</span>
+								</div>
+								<span class="tipbtn orange">
+									<span class="txt2">立即抢购</span>
+								</span>
+							</div>
+						</div>
+				</div>
+			</li>
+			<li>
+				<div class="w newer" style="background-image: url(./Images/images/mt3.png)">
+					<img src="./Images/images/circle.png" alt="" class="tempimg">
+					<div class="wc">
+						<div class="newc">
+							<img src="./Images/images/circle.png" alt="" class="tempimg">
+							<div class="newcc orange">
+								<div class="abs">
+									<div class="xt">新品抢先看</div>
+									<div class="small">10.27新品</div>
+									<div class="arrowdown"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	
+	<div class="margin5"></div>
+	<div class="floor">
+		<div class="fl-top">
+			<div class="wordimg">
+				<img src="./Images/images/tit33.png" alt="" class="img-full">
+			</div>
+			<div class="leftimg">
+				<img src="./Images/images/circle.png" alt="" class="tempimg">
+				<img src="./Images/images/4.png" alt="" class="img-c">
+			</div>
+			<a href="" class="more">MORE+</a>
+		</div>
+		<div class="fl-con2">
+			<div class="left">
+				<div class="panel">
+					<img src="./Images/img/panel33.png" alt="" class="img-full">
+				</div>
+				<div class="wimg">
+					<img src="./Images/img/fl111.png" alt="">
+				</div>
+			</div>
+			<div class="right">
+				
+				<div class="wimg">
+					<div class="borderline"></div>
+					<img src="./Images/img/fl222.png" alt="">
+					<img src="./Images/img/fl333.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 家居 -->
+	<div class="mf4 jiaju">
+		<ul class="js-active">
+			<li>
+				<div class="w">
+					<div class="topt">
+						家居用品
+					</div>
+					<div class="icon">
+						<i class="iconfont icon-shenghuojiaju"></i>
+					</div>
+				</div>
+			</li>
+			<li class="active">
+				<div class="w">
+					<div class="topt">
+						创意家居
+					</div>
+					<div class="icon">
+						<i class="iconfont icon-jiaju"></i>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="w">
+					<div class="topt">
+						家用电器
+					</div>
+					<div class="icon">
+						<i class="iconfont icon-jiajubaihuo"></i>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="w">
+					<div class="topt">
+						时尚家纺
+					</div>
+					<div class="icon">
+						<i class="iconfont icon-jiaju1"></i>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<div class="margin15"></div>
+
+
+	<!-- floor two -->
+	<!-- 服装 -->
+	<div class="floor">
+		<div class="fl-top">
+			<div class="wordimg">
+				<img src="./Images/images/tit22.png" alt="" class="img-full">
+			</div>
+			<div class="leftimg">
+				<img src="./Images/images/circle.png" alt="" class="tempimg">
+				<img src="./Images/images/5.png" alt="" class="img-c">
+			</div>
+			<a href="" class="more">MORE+</a>
+		</div>
+		<div class="fl-con">
+			<div class="left">
+				<div class="panel">
+					<img src="./Images/img/f11f.png" alt="" class="img-full">
+				</div>
+				<div class="wimg">
+					<a href="" class="half-link"></a>
+					<a href="" class="half-link"></a>
+					<div class="borderline"></div>
+					<img src="./Images/img/f22f.png" alt="">
+					<img src="./Images/img/f33f.png" alt="">
+				</div>
+			</div>
+			<div class="right">
+				<a href="" class="abs-link"></a>
+				<img src="./Images/img/f44f.png" alt="">
+			</div>
+		</div>
+	</div>
+
+	<div class="mt3">
+		<ul>
+			<li>
+				<!-- 图片比例： 1:1  -->
+				<div class="w" style="background-image: url(./Images/images/mt3.png)">
+					<img src="./Images/images/circle.png" alt="" class="tempimg">
+						<div class="wc">
+							<div class="wcc">
+								<div class="borderbtn">
+									<span class="topborder"></span>
+									<span class="bottomborder"></span>
+									<span class="txt">爆款单品</span>
+								</div>
+								<span class="tipbtn red2">
+									<span class="txt2">直降50</span>
+								</span>
+							</div>
+						</div>
+				</div>
+			</li>
+			<li>
+				<!-- 背景图片比例： 1:1  -->
+				<div class="w" style="background-image: url(./Images/images/mt3.png)">
+					<img src="./Images/images/circle.png" alt="" class="tempimg">
+						<div class="wc">
+							<div class="wcc">
+								<div class="borderbtn">
+									<span class="topborder"></span>
+									<span class="bottomborder"></span>
+									<span class="txt">手机专享</span>
+								</div>
+								<span class="tipbtn red2">
+									<span class="txt2">立即抢购</span>
+								</span>
+							</div>
+						</div>
+				</div>
+			</li>
+			<li>
+				<div class="w newer" style="background-image: url(./Images/images/mt3.png)">
+					<img src="./Images/images/circle.png" alt="" class="tempimg">
+					<div class="wc">
+						<div class="newc">
+							<img src="./Images/images/circle.png" alt="" class="tempimg">
+							<div class="newcc red2">
+								<div class="abs">
+									<div class="xt">新品抢先看</div>
+									<div class="small">10.27新品</div>
+									<div class="arrowdown"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<div class="margin5"></div>
+	
+	<!-- 保健 -->
+	<div class="floor">
+		<div class="fl-top">
+			<div class="wordimg">
+				<img src="./Images/images/tit11.png" alt="" class="img-full">
+			</div>
+			<div class="leftimg">
+				<img src="./Images/images/circle.png" alt="" class="tempimg">
+				<img src="./Images/images/6.png" alt="" class="img-c">
+			</div>
+			<a href="" class="more">MORE+</a>
+		</div>
+		<div class="fl-con2">
+			<div class="left">
+				<div class="panel">
+					<img src="./Images/img/s11s.png" alt="" class="img-full">
+				</div>
+				<div class="wimg">
+					<img src="./Images/img/s22s.png" alt="">
+				</div>
+			</div>
+			<div class="right">
+				
+				<div class="wimg">
+					<div class="borderline"></div>
+					<img src="./Images/img/s33s.png" alt="">
+					<img src="./Images/img/s44s.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="mf4 lingshi">
+		<ul class="js-active">
+			<li>
+				<div class="w">
+					<div class="topt">
+						中老年保健
+					</div>
+					<div class="icon">
+						<i class="iconfont icon-baojianpin"></i>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="w">
+					<div class="topt">
+						年轻人保健
+					</div>
+					<div class="icon">
+						<i class="iconfont icon-pingzi"></i>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="w">
+					<div class="topt">
+						进口保健品
+					</div>
+					<div class="icon">
+						<i class="iconfont icon-icon033"></i>
+					</div>
+				</div>
+			</li>
+			<li class="active">
+				<div class="w">
+					<div class="topt">
+						保健养颜
+					</div>
+					<div class="icon">
+						<i class="iconfont icon-baojianpin1"></i>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<div class="margin5"></div>
+
+	<!-- 婴幼儿 -->
+	<div class="floor">
+		<div class="fl-top">
+			<div class="wordimg">
+				<img src="./Images/images/panel.png" alt="" class="img-full">
+			</div>
+			<div class="leftimg">
+				<img src="./Images/images/circle.png" alt="" class="tempimg">
+				<img src="./Images/images/7.png" alt="" class="img-c">
+			</div>
+			<a href="" class="more">MORE+</a>
+		</div>
+		<div class="fl-con">
+			<div class="left">
+				<div class="panel">
+					<img src="./Images/img/t11t.png" alt="" class="img-full">
+				</div>
+				<div class="wimg">
+					<a href="" class="half-link"></a>
+					<a href="" class="half-link"></a>
+					<div class="borderline"></div>
+					<img src="./Images/img/t22t.png" alt="">
+					<img src="./Images/img/t33t.png" alt="">
+				</div>
+			</div>
+			<div class="right">
+				<a href="" class="abs-link"></a>
+				<img src="./Images/img/t44t.png" alt="">
+			</div>
+		</div>
+	</div>
+
+
+	<div class="mt3">
+		<ul>
+			<li>
+				<!-- 图片比例： 1:1  -->
+				<div class="w" style="background-image: url(./Images/images/mt3.png)">
+					<img src="./Images/images/circle.png" alt="" class="tempimg">
+						<div class="wc">
+							<div class="wcc">
+								<div class="borderbtn">
+									<span class="topborder"></span>
+									<span class="bottomborder"></span>
+									<span class="txt">爆款单品</span>
+								</div>
+								<span class="tipbtn orange">
+									<span class="txt2">直降50</span>
+								</span>
+							</div>
+						</div>
+				</div>
+			</li>
+			<li>
+				<!-- 背景图片比例： 1:1  -->
+				<div class="w" style="background-image: url(./Images/images/mt3.png)">
+					<img src="./Images/images/circle.png" alt="" class="tempimg">
+						<div class="wc">
+							<div class="wcc">
+								<div class="borderbtn">
+									<span class="topborder"></span>
+									<span class="bottomborder"></span>
+									<span class="txt">手机专享</span>
+								</div>
+								<span class="tipbtn orange">
+									<span class="txt2">立即抢购</span>
+								</span>
+							</div>
+						</div>
+				</div>
+			</li>
+			<li>
+				<div class="w newer" style="background-image: url(./Images/images/mt3.png)">
+					<img src="./Images/images/circle.png" alt="" class="tempimg">
+					<div class="wc">
+						<div class="newc">
+							<img src="./Images/images/circle.png" alt="" class="tempimg">
+							<div class="newcc orange">
+								<div class="abs">
+									<div class="xt">新品抢先看</div>
+									<div class="small">10.27新品</div>
+									<div class="arrowdown"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	
+	<div class="margin5"></div>
+	<!-- 汽车 -->
+	<div class="floor">
+		<div class="fl-top">
+			<div class="wordimg">
+				<img src="./Images/images/tit33.png" alt="" class="img-full">
+			</div>
+			<div class="leftimg">
+				<img src="./Images/images/circle.png" alt="" class="tempimg">
+				<img src="./Images/images/8.png" alt="" class="img-c">
+			</div>
+			<a href="" class="more">MORE+</a>
+		</div>
+		<div class="fl-con2">
+			<div class="left">
+				<div class="panel">
+					<img src="./Images/img/z11z.png" alt="" class="img-full">
+				</div>
+				<div class="wimg">
+					<img src="./Images/img/z22z.png" alt="">
+				</div>
+			</div>
+			<div class="right">
+				
+				<div class="wimg">
+					<div class="borderline"></div>
+					<img src="./Images/img/z33z.png" alt="">
+					<img src="./Images/img/z44z.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 汽车配饰 -->
+	<div class="mf4 jiaju">
+		<ul class="js-active">
+			<li>
+				<div class="w">
+					<div class="topt">
+						汽车内饰
+					</div>
+					<div class="icon">
+						<i class="iconfont icon-peijian"></i>
+					</div>
+				</div>
+			</li>
+			<li class="active">
+				<div class="w">
+					<div class="topt">
+						创意摆件
+					</div>
+					<div class="icon">
+						<i class="iconfont icon-qicheyanghu"></i>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="w">
+					<div class="topt">
+						汽车清洁
+					</div>
+					<div class="icon">
+						<i class="iconfont icon-qingji"></i>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="w">
+					<div class="topt">
+						汽车配件
+					</div>
+					<div class="icon">
+						<i class="iconfont icon-weixiu"></i>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<div class="margin15"></div>
+
+	<div class="b1">
+		<img src="./Images/img/bc-2.png" alt="" class="img-full">
+		<div class="bc bc2">
+
+			<ul class="even js-active">
+				<li>
+					<a href=""></a>
+					<img src="./Images/images/circle.png" alt="" class="tempimg">
+					<div class="w">
+						<img src="./Images/img/bc21.png" alt="" class="">
+						<span>热&nbsp;&nbsp;销</span>
+					</div>
+				</li>
+				<li class="active">
+					<a href=""></a>
+					<img src="./Images/images/circle.png" alt="" class="tempimg">
+					<div class="w">
+						<img src="./Images/img/bc22.png" alt="" class="">
+						<span>零&nbsp;&nbsp;食</span>
+					</div>
+				</li>
+				<li>
+					<a href=""></a>
+					<img src="./Images/images/circle.png" alt="" class="tempimg">
+					<div class="w">
+						<img src="./Images/img/bc23.png" alt="" class="">
+						<span>新&nbsp;&nbsp;品</span>
+					</div>
+				</li>
+				<li>
+					<a href=""></a>
+					<img src="./Images/images/circle.png" alt="" class="tempimg">
+					<div class="w">
+						<img src="./Images/img/bc24.png" alt="" class="">
+						<span>母婴用品</span>
+					</div>
+				</li>
+			</ul>
+			<ul class="odd js-active">
+				<li>
+					<a href=""></a>
+					<img src="./Images/images/circle.png" alt="" class="tempimg">
+					<div class="w">
+						<img src="./Images/img/bc25.png" alt="" class="">
+						<span>饰&nbsp;&nbsp;品</span>
+					</div>
+				</li>
+				<li>
+					<a href=""></a>
+					<img src="./Images/images/circle.png" alt="" class="tempimg">
+					<div class="w">
+						<img src="./Images/img/bc26.png" alt="" class="">
+						<span>美容护肤</span>
+					</div>
+				</li>
+				<li>
+					<a href=""></a>
+					<img src="./Images/images/circle.png" alt="" class="tempimg">
+					<div class="w">
+						<img src="./Images/img/bc27.png" alt="" class="">
+						<span>养生保健</span>
+					</div>
+				</li>
+				<li>
+					<a href=""></a>
+					<img src="./Images/images/circle.png" alt="" class="tempimg">
+					<div class="w">
+						<img src="./Images/img/bc28.png" alt="" class="">
+						<span>汽车用品</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<footer>
+		<div class="c">
+			<a class="sign" href="javascript:;">登陆</a>
+			<div class="circle">
+				<img src="./Images/images/totop.png" alt="">
+				<a href="#toTop" class="totop">返回顶部</a>
+			</div>
+			<a class="sign" href="javascript:;">注册</a>
+		</div>
+	</footer>
+</body>
+</html>

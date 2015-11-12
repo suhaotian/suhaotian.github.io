@@ -1,0 +1,338 @@
+@import '_lib/header.scss';
+
+
+.wc {
+	width: 64%;
+	margin: 0 auto;
+	img {
+		width: 100%;
+	}
+}
+
+.pics {
+	padding: 12px 0;
+	background: #fff;
+}
+
+.bbottom {
+	border-bottom: 15px solid #DEDEDB;
+}
+
+
+.tab-content {
+	display: none;
+	border-left: 15px solid #DEDEDB;
+	border-right: 15px solid #DEDEDB;
+}
+
+.tab-content.active {
+	display: block;
+}
+.pic {
+	img {
+		display: block;
+		width: 100%;
+	}
+}
+
+.fixed-bottom {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	left: 0;
+	overflow: hidden;
+	background: #ccc;
+	z-index: 11;
+}
+
+.fixed-bottom {
+	text-align: center;
+	padding: 15px 40px;
+	white-space: nowrap;
+}
+.inlinem {
+	width: 20%;
+	display: inline-block;
+}
+.circle-btn {
+	position: relative;
+	display: inline-block;
+	font-size: 24px;
+	width:96px;
+	height: 96px;
+	padding: 12px;
+	background: #EBAE70;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 1.42;
+	color: #242424;
+	box-shadow: 0 0 15px rgba(0, 0, 0, .6);
+	margin: 0 auto;
+	position: relative;
+
+	span {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		display: inline-block;
+		width: 100%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.w3 {
+	padding-bottom: 200px;
+	background: #DEDEDB;
+}
+
+.tabs {
+	ul {
+		display: table;
+		width: 100%;
+		background: #fff;
+		padding: 8px 0;
+		li {
+			display: table-cell;
+			width: 33.333%;
+			text-align: center;
+			border-right: 1px solid #ddd;
+			&:last-child {
+				border-color: transparent;
+			}
+			a {
+				display: inline-block;
+				font-size: 26px;
+				padding: 8px 0;
+				color: #000;
+				width: 100%;
+			}
+		}
+
+		.active a{
+			color: red;
+		}
+	}
+}
+
+
+.fl {
+	padding: 6px 15px;
+	overflow: hidden;
+	h2 {
+		margin: 0 ;
+		font-size: 26px;
+		color: #000;
+		line-height: 1.4;
+		font-weight: 200;
+	}
+}
+
+.ercode {
+	float: right;
+	color: #333;
+	padding: 10px;
+	margin-left: 10px;
+	i {
+		font-size: 32px;
+	}
+}
+
+.price,.counter {
+	color: red;
+	i {
+		font-size: 28px;
+	}
+}
+
+.price {
+	.now {
+		font-size: 24px;
+		span {
+			font-size:40px;
+		}
+	}
+
+	.old {
+		font-size: 24px;
+		color: #999;
+
+		span {
+			text-decoration: line-through;
+			color: #727272;
+		}
+	}
+}
+
+
+.counter {
+	float: right;
+	color: #999;
+	font-size: 30px;
+	span {
+		color: red;
+		font-size: 24px;
+		i {
+			margin-right: 6px;
+			font-size: 25px;
+		}
+	}
+}
+.fl {
+	.t {
+		color: #626262;
+		font-size: 26px;
+		float: left;
+		margin-top: 8px;
+	}
+
+	.r {
+		display: inline-block;
+		overflow: hidden;
+		margin-left: 20px;
+	}
+}
+
+.gray {
+	position: relative;
+	top: -16px;
+	color: #727272;
+	font-size: 24px;
+	vertical-align: middle;
+}
+
+.lists, .icon {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.icon i{
+	
+	color: red;
+	font-size: 42px; 
+}
+
+.icon.active i{
+	color: #727272;
+}
+
+
+
+
+.lists {
+	display: inline-block;
+	max-width: 210Px;
+	.hide {
+		height: 48px;
+		overflow: hidden;
+	}
+	ul {
+		// display: table;
+		
+		li {
+			display: inline-block;
+			font-size: 22px;
+			padding: 6px;
+			a {
+				padding: 4px 8px;
+				display: inline-block;
+				color: #727272;
+				border: 1px solid #ddd;
+			}
+		}
+
+		.active a {
+			border-color: red;
+			color: red;
+		}
+		
+	}
+}
+.comment {
+	border: 0;
+	background: #fff;
+}
+.comment-tabs {
+	background: #FFCC00;
+
+	ul {
+		display: table;
+		width: 100%;
+
+		li {
+			display: table-cell;
+			width: 25%;
+			text-align: center;
+		}
+		li.active {
+			a {
+				color: red;
+			}
+		}
+
+		a {
+			font-size: 24px;
+			display: inline-block;
+			padding: 16px 0 ;
+			width: 100%;
+			color: #000;
+		}
+	}
+}
+
+.comment-filter {
+	padding: 0 15px;
+	li {
+	}
+	.fl2 {
+		padding: 12px 0;
+		overflow: hidden;
+		.stars {
+			color: red;
+			float: right;
+
+			i {
+				font-size: 24px;
+			}
+		}
+
+		.nickname {
+			font-size: 26px;
+			color:#999;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+		}
+	}
+
+	.comment-content {
+		padding: 0 0 12px 0;
+		p {
+			margin: 0;
+			color: #444;
+			font-size: 22px;
+			line-height: 1.42;
+		}
+		.pics {
+			width: 64%;
+			overflow: hidden;
+			padding: 0;
+			margin-top: 6px;
+			img {
+				float: left;
+				display: block;
+				width: 18.5%;
+				margin-right: 1.5%;
+			}
+		}
+	}
+
+	.comment-info {
+		font-size: 22px;
+		color: #999;
+		padding-bottom: 12px;
+		a {
+			color: #999;
+		}
+	}
+}
+
