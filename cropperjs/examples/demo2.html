@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+  <title>Cropper.js</title>
+  <link rel="stylesheet" href="../dist/cropper.css">
+  <!-- // <script src="http://192.168.31.185:1337/vorlon.js"></script> -->
+  <style>
+  	html, body {
+      height: 100%;
+      width: 100%;
+  	}
+    body {
+      margin: 0;
+      color: #fff;
+      /*background: #fff;*/
+    }
+    .container {
+      /*margin: 0;*/
+      overflow: hidden;
+    }
+
+    .img-container {
+      width: 100%;
+      max-width: 640px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .img-container img {
+      max-width: 100%;
+    }
+    .cropper-view-box {
+    	outline: 1px dashed orange;
+    	outline-color: orange;
+    }
+	button.btn {
+		position: absolute;
+		bottom: 25px;
+		z-index: 10000;
+	}
+    button.preview {
+    	position: absolute;
+    	right: 25px;
+    	z-index: 9999;
+    }
+    button.upload {
+    	position: absolute;
+    	left: 25px;
+    	z-index: 9999;
+    }
+    button input {
+    	position: absolute;
+    	opacity: 0;
+    	top: 0;
+    	left: 0;
+    	width: 100%;
+    	height: 100%;
+    }
+    .pop {
+    	display: none;
+    	position: fixed;
+    	top: 0;
+    	left: 0;
+    	right: 0;
+    	bottom: 0;
+    	background: rgba(0, 0, 0, .8);
+    	z-index: 20000;
+    }
+
+    .pop img{
+    	display: block;
+		max-width: 60%;
+
+		margin: 20% auto 0 auto;
+    }
+    .pop button {
+    	display: block;
+    	position: absolute;
+    	right: 25px;
+    	bottom: 25px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="img-container">
+      <img src="../assets/img/cat.jpg" class="img" alt="Picture">
+    </div>
+  </div>
+  <button class="upload btn">
+  	<span>更换图片</span>
+  	<input type="file" accept="image/*">
+  </button>
+  <button class="preview btn">预览</button>
+
+  <div class="pop">
+  	<img>
+  	<button>关闭</button>
+  </div>
+  <script src="../dist/cropper.min.js"></script>
+  <script>
+  	var cropper
+  	function crop(image) {
+	  	return  new Cropper(image, {
+			        dragMode: 'move',
+			        aspectRatio: 2/3,
+			        autoCropArea: .8,
+			        viewMode: 1,
+			        minContainerHeight: document.body.offsetHeight,
+			        // minCropBoxHeight: 600,
+			        // minCanvasHeight: 600,
+			        restore: false,
+			        guides: false,
+			        center: false,
+			        highlight: true,
+			        // zoomOnWheel: false,
+			        cropBoxMovable: false,
+			        cropBoxResizable: true
+			    })
+  	}
+    window.addEventListener('DOMContentLoaded', function () {
+      var $image = document.querySelector('.img-container .img');
+      var $preview = document.querySelector('.pop img')
+      var $pop = document.querySelector('.pop')
+      var $popClose = $pop.querySelector('button')
+
+      cropper = crop($image)
+      document.querySelector('button.preview').addEventListener('click', function(){
+      	var url = cropper.getCroppedCanvas({
+  			width: 200,
+  			height: 100
+		}).toDataURL();
+		$preview.setAttribute('src', url)
+		$pop.style.display = 'block'
+		$popClose.addEventListener('click', function(){
+			$pop.style.display = 'none'
+		})
+      })
+
+      
+      // var 
+      document.querySelector('input[type=file]').addEventListener('change', function(){
+      	// alert(1)
+      	var self = this
+      	var files = self.files
+      	if (files && files[0]) {
+      		var reader = new FileReader()
+      		reader.onload = function(e) {
+      			// alert(1)
+      			// $image.setAttribute('src', e.target.result)
+      			cropper.replace(e.target.result)
+      		}
+      		reader.readAsDataURL(files[0])
+      	}
+      })
+    });
+  </script>
+</body>
+</html>
