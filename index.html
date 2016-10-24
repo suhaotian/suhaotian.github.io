@@ -48,7 +48,13 @@ window.runAfterDomBinding = {
     <script src="//assets.sxlcdn.com/assets/v4/page-site-bundle-cca47a9bf541d0b7ad034108e276d067.js"></script> 
     <script>
       $(function(){
-        $('.logo-link.logo-link-sxl').remove()
+        var _id setInterval(function(){
+          var els = $('.logo-link.logo-link-sxl')
+          if(els.length > 0) {
+            els.remove()
+            clearInverval(_id)
+          }
+        }, 300)
       })
     </script>
   </body> 
